@@ -1,30 +1,15 @@
 #Greenfoot project file
-<<<<<<< HEAD
-<<<<<<< HEAD
 class.B.image=alligator.png
-=======
 class.D.image=tree3.png
->>>>>>> bcca690e9f551fb1af2f7bbeac97a348e64c0501
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=552
-editor.fx.0.y=100
-<<<<<<< HEAD
-=======
-height=777
->>>>>>> bcca690e9f551fb1af2f7bbeac97a348e64c0501
-=======
 class.rem.image=img1.jpg
 class.uchi.image=pear.png
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
->>>>>>> 6f58e640ab0b0b54290a3aa59b0519c85c3d1d42
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=195
+editor.fx.0.y=86
 height=585
->>>>>>> 6f58e640ab0b0b54290a3aa59b0519c85c3d1d42
 package.numDependencies=0
-package.numTargets=3
+package.numTargets=5
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -40,50 +25,42 @@ readme.x=10
 readme.y=10
 simulation.speed=50
 target1.height=50
-<<<<<<< HEAD
-target1.name=uchi
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 target1.name=B
-=======
-target1.name=D
->>>>>>> bcca690e9f551fb1af2f7bbeac97a348e64c0501
-=======
-target1.name=rem
->>>>>>> 6f58e640ab0b0b54290a3aa59b0519c85c3d1d42
->>>>>>> 1b98e1dae7c58b15b1f290d6746dac518e0bcde3
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=80
 target1.x=0
 target1.y=0
 target2.height=50
-target2.name=rem
+target2.name=D
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=80
 target2.x=0
 target2.y=0
 target3.height=50
-target3.name=MyWorld
+target3.name=uchi
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=80
 target3.x=0
 target3.y=0
+target4.height=50
+target4.name=rem
+target4.showInterface=false
+target4.type=ClassTarget
+target4.width=80
+target4.x=0
+target4.y=0
+target5.height=50
+target5.name=MyWorld
+target5.showInterface=false
+target5.type=ClassTarget
+target5.width=80
+target5.x=0
+target5.y=0
 version=3.0.0
 width=969
 world.lastInstantiated=MyWorld
-<<<<<<< HEAD
-<<<<<<< HEAD
-xPosition=876
-yPosition=117
-=======
-xPosition=944
-yPosition=134
->>>>>>> bcca690e9f551fb1af2f7bbeac97a348e64c0501
-=======
 xPosition=49
 yPosition=201
->>>>>>> 6f58e640ab0b0b54290a3aa59b0519c85c3d1d42
