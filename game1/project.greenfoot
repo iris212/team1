@@ -5,9 +5,15 @@ class.rem.image=img1.jpg
 class.uchi.image=pear.png
 editor.fx.0.height=739
 editor.fx.0.width=816
+<<<<<<< HEAD
 editor.fx.0.x=195
 editor.fx.0.y=86
 height=585
+=======
+editor.fx.0.x=552
+editor.fx.0.y=100
+height=922
+>>>>>>> f7aeca48d59a6190471fa009a9990aab8f68b768
 package.numDependencies=0
 package.numTargets=5
 project.charset=UTF-8
@@ -60,7 +66,12 @@ target5.width=80
 target5.x=0
 target5.y=0
 version=3.0.0
-width=969
+width=1422
 world.lastInstantiated=MyWorld
+<<<<<<< HEAD
 xPosition=49
 yPosition=201
+=======
+xPosition=265
+yPosition=115
+>>>>>>> f7aeca48d59a6190471fa009a9990aab8f68b768
