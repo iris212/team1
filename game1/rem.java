@@ -19,5 +19,11 @@ public class rem extends Actor
         move(1);
     }
         // Add your action code here.
+        
+        if( Greenfoot.isKeyDown( "up" ) ){
+        setRotation(-90);
+        move(1);
+    }
+        
     }    
 }
