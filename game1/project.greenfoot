@@ -3,19 +3,11 @@ class.B.image=alligator.png
 class.D.image=tree3.png
 class.rem.image=img1.jpg
 class.uchi.image=pear.png
-<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
-height=585
-=======
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=512
-editor.fx.0.y=152
 height=922
->>>>>>> 9fdb1fc8979cbe620008c9a133d75d77915a7026
 package.numDependencies=0
 package.numTargets=5
 project.charset=UTF-8
@@ -70,10 +62,5 @@ target5.y=0
 version=3.0.0
 width=825
 world.lastInstantiated=MyWorld
-<<<<<<< HEAD
-xPosition=873
-yPosition=87
-=======
-xPosition=265
+xPosition=117
 yPosition=115
->>>>>>> 9fdb1fc8979cbe620008c9a133d75d77915a7026
