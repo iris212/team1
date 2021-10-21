@@ -2,6 +2,7 @@
 class.B.image=alligator.png
 class.D.image=tree3.png
 class.rem.image=img1.jpg
+<<<<<<< HEAD
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=896
@@ -9,6 +10,16 @@ editor.fx.0.y=101
 height=585
 package.numDependencies=0
 package.numTargets=4
+=======
+class.uchi.image=pear.png
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=552
+editor.fx.0.y=100
+height=922
+package.numDependencies=0
+package.numTargets=5
+>>>>>>> f7aeca48d59a6190471fa009a9990aab8f68b768
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -38,21 +49,44 @@ target2.width=80
 target2.x=0
 target2.y=0
 target3.height=50
+<<<<<<< HEAD
 target3.name=rem
+=======
+target3.name=uchi
+>>>>>>> f7aeca48d59a6190471fa009a9990aab8f68b768
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=80
 target3.x=0
 target3.y=0
 target4.height=50
+<<<<<<< HEAD
 target4.name=MyWorld
+=======
+target4.name=rem
+>>>>>>> f7aeca48d59a6190471fa009a9990aab8f68b768
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=80
 target4.x=0
 target4.y=0
+<<<<<<< HEAD
+=======
+target5.height=50
+target5.name=MyWorld
+target5.showInterface=false
+target5.type=ClassTarget
+target5.width=80
+target5.x=0
+target5.y=0
+>>>>>>> f7aeca48d59a6190471fa009a9990aab8f68b768
 version=3.0.0
-width=969
+width=1422
 world.lastInstantiated=MyWorld
+<<<<<<< HEAD
 xPosition=715
 yPosition=165
+=======
+xPosition=265
+yPosition=115
+>>>>>>> f7aeca48d59a6190471fa009a9990aab8f68b768
