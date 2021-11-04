@@ -1,6 +1,7 @@
 #Greenfoot project file
 class.B.image=alligator.png
 class.D.image=tree3.png
+class.MyWorld.image=map_haikei01.jpg
 class.rem.image=img1.jpg
 class.uchi.image=pear.png
 editor.fx.0.height=739
