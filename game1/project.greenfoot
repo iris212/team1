@@ -6,6 +6,21 @@ class.gameover.image=figure_korobu.png
 class.heart.image=valentinesday_heart.png
 class.human.image=figure_hashiru.png
 class.map_block1.image=map_renga.png
+<<<<<<< HEAD
+class.rem.image=img1.jpg
+class.uchi.image=pear.png
+class.virus_1.image=virus_corona_mutant_virus.png
+dependency1.from=MyWorld
+dependency1.to=map_block1
+dependency1.type=UsesDependency
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+height=735
+package.numDependencies=1
+package.numTargets=16
+=======
 class.mask.image=medical_mask_front_view.png
 class.skate.image=inlineskate.png
 class.vaccine.image=medical_vaccine.png
@@ -39,6 +54,7 @@ editor.fx.0.y=125
 height=735
 package.numDependencies=7
 package.numTargets=12
+>>>>>>> 876f4fce46bc7468f3a6cedfb2916f9e886b14a0
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -138,7 +154,17 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
-width=1095
+width=1256
 world.lastInstantiated=MyWorld
+<<<<<<< HEAD
 xPosition=220
 yPosition=109
+=======
+<<<<<<< HEAD
+xPosition=0
+yPosition=155
+=======
+xPosition=713
+yPosition=92
+>>>>>>> 876f4fce46bc7468f3a6cedfb2916f9e886b14a0
+>>>>>>> 2cbc1287ed79eac4f678f6e01f528cb795d6c57a
