@@ -15,5 +15,11 @@ public class alcohol extends Actor
     public void act() 
     {
         // Add your action code here.
+        
+        int A = 0;
+        int B = 360;
+        int C = A + (int)(Math.random()*((B-A)+1));
+        setRotation(C);
+        
     }    
 }
