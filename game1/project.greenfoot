@@ -1,7 +1,7 @@
 #Greenfoot project file
 class.MyWorld.image=map_haikei01.jpg
 class.alcohol.image=medical_syoudoku_alcohol.png
-class.clear.image=figure_happy.png
+class.clear.image=figure_happy\ .png
 class.gameover.image=figure_korobu.png
 class.heart.image=valentinesday_heart.png
 class.human.image=figure_hashiru.png
@@ -140,5 +140,5 @@ target9.y=0
 version=3.0.0
 width=1095
 world.lastInstantiated=MyWorld
-xPosition=713
-yPosition=92
+xPosition=220
+yPosition=109
