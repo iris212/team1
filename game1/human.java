@@ -66,7 +66,7 @@ public class human extends Actor
            Actor actor4 = getOneIntersectingObject( vaccine.class );
         if( actor4 != null ){
             //体力を回復
-            
+            getWorld().removeObject( actor4 );
         }  
         
          Actor actor5 = getOneIntersectingObject( virus_1.class );
