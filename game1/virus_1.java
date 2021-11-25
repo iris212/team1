@@ -21,14 +21,25 @@ public class virus_1 extends Actor
         // Add your action code here.
         setRotation(C); 
         move(4);
-
-        if( isAtEdge() ){
-            if( flag_edge == false ){
-                C = A + (int)(Math.random()*((B-A)+1));
-                setRotation(C);
-                flag_edge=true;
-            }
+        int x = getX();
+        int y = getY();
+        
+        if( x == 0 ){
+            C = 300 + (int)(Math.random()*((120)+1));
+            C = C % 360;
+            setRotation(C);
         }
-        else{flag_edge = false;}
+        if( x == 1249 ){
+            C = 120 + (int)(Math.random()*((120)+1));
+            setRotation(C);
+        }
+        if( y == 0 ){
+            C = 30 + (int)(Math.random()*((120)+1));
+            setRotation(C);
+        }
+        if( y == 699 ){
+            C = 150 + (int)(Math.random()*((120)+1));
+            setRotation(C);
+        }
     }
 }
