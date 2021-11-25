@@ -20,16 +20,16 @@ public class human extends Actor
         int s = 4;
 
         if( Greenfoot.isKeyDown( "left" ) ){
-            setLocation( x+s,y );
-        }
-        if( Greenfoot.isKeyDown( "right" ) ){
             setLocation( x-s,y );
         }
+        if( Greenfoot.isKeyDown( "right" ) ){
+            setLocation( x+s,y );
+        }
         if( Greenfoot.isKeyDown( "up" ) ){
-            setLocation( x,y+s );
+            setLocation( x,y-s );
         }
         if( Greenfoot.isKeyDown( "down" ) ){
-            setLocation( x,y-s );
+            setLocation( x,y+s );
         }
 
         Actor actor1 = getOneIntersectingObject( alcohol.class );
@@ -66,6 +66,7 @@ public class human extends Actor
            Actor actor4 = getOneIntersectingObject( vaccine.class );
         if( actor4 != null ){
             //体力を回復
+            getWorld().removeObject( actor4 );
         }  
         
          Actor actor5 = getOneIntersectingObject( virus_1.class );
