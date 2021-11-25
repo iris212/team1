@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    private int timecount = 3000;
+    private int timecount = 30;
     /**
      * 
      * Constructor for objects of class MyWorld.
@@ -83,9 +83,12 @@ public class MyWorld extends World
         
         if( timecount == 0)
         {
-            showText( "TIME OVER" , 400,250 );
             addObject( new gameover(), 650 ,400 );
-          Greenfoot.stop();
+            showText( "TIME OVER" , 400,250 );
+            showText( "残り体力" , 400,300 );
+            showText( "拾ったスコア加算アイテム数 " , 480,500 );
+            showText( "合計スコア " , 400,550 );
+            Greenfoot.stop();
         }
         
     }
