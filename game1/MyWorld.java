@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    private int timecount = 500;
+    private int timecount = 3000;
     /**
      * 
      * Constructor for objects of class MyWorld.
@@ -59,6 +59,11 @@ public class MyWorld extends World
             }
         }
         
+        for(int i = 1;  i< 4; i++)
+        {
+            addObject( new heart(), 850 - 74*i ,25);
+        }           
+      
    } 
    
     public void act()
@@ -72,7 +77,6 @@ public class MyWorld extends World
             addObject( new gameover(), 650 ,400 );
           Greenfoot.stop();
         }
-        
         
     }
 }

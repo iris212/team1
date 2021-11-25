@@ -17,7 +17,7 @@ public class human extends Actor
     {
         int x = getX();
         int y = getY();
-        int s = 4;
+        int s = 5;
 
         if( Greenfoot.isKeyDown( "left" ) ){
             setLocation( x-s,y );
