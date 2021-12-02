@@ -99,7 +99,9 @@ public class MyWorld extends World
         //showText( "labels: "+WorldVisitor.getTextLabels(this).size(), 80, 20 );
     }
     
-    private int timecount = 30;
+    
+    
+    private int timecount = 1500;
         public MyWorld()
     {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -127,6 +129,18 @@ public class MyWorld extends World
             for(int x = 0; x < 25; x++){
                 if(map[y][x]==1){
                     addObject( new map_block1(), 25+(x*50), 25+(y*50));
+                    if(y != 0){
+                        if(map[y-1][x]!=1)addObject( new map_edge_up(),25+(x*50),(y*50));
+                    }
+                    if(y != 13){
+                        if(map[y+1][x]!=1)addObject( new map_edge_down(),25+(x*50),50+(y*50));
+                    }
+                    if(x != 0){
+                        if(map[y][x-1]!=1)addObject( new map_edge_left(),(x*50),25+(y*50));
+                    }
+                    if(x != 24){
+                        if(map[y][x+1]!=1)addObject( new map_edge_right(),50+(x*50),25+(y*50));
+                    }
                 }
                 if(map[y][x]==2){
                     addObject( new alcohol(), 25+(x*50), 25+(y*50));
