@@ -38,7 +38,7 @@ public class virus_1 extends Actor
             setRotation(C);
         }
         if( y == 699 ){
-            C = 150 + (int)(Math.random()*((120)+1));
+            C = 210 + (int)(Math.random()*((120)+1));
             setRotation(C);
         }
     }
