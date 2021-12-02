@@ -1,3 +1,9 @@
+/**
+ * Write a description of class MyWorld here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import greenfoot.core.TextLabel;
 import greenfoot.WorldVisitor;
@@ -6,12 +12,6 @@ import java.util.ArrayList;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MyWorld extends World
 {   
     /**
@@ -188,7 +188,7 @@ public class MyWorld extends World
             showTextEx( "GAME OVER", 580, 250, 100, true, greenfoot.Color.RED );
             showText( "残り体力" , 400,300 );
             showText( "拾ったスコア加算アイテム数 " , 480,500 );
-            showText( "合計スコア " , 400,550 );
+            showTextEx( "合計スコア " , 400,550, 50 , true , greenfoot.Color.BLACK );
             Greenfoot.stop();
         }
         
