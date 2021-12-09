@@ -13,12 +13,16 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    static public int score = 0;
     public MyWorld()
     {   
-      
+
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1250, 700, 1);
         //(850,550)
+
+        showText( "score = " + score, 100, 50 );
+
         int map[][] = {
                 {1,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                 {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1},
@@ -69,3 +73,4 @@ public class MyWorld extends World
         }
     }
 }
+

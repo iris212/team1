@@ -8,13 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class human extends Actor
 {
-    private int score = 0;
+    
     /**
      * Act - do whatever the human wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+   
         int x = getX();
         int y = getY();
         int s = 4;
@@ -34,13 +35,14 @@ public class human extends Actor
 
         Actor actor1 = getOneIntersectingObject( alcohol.class );
         if( actor1 != null ){
-            score = 500;
+            MyWorld.score += 500;
+            
             getWorld().removeObject( actor1 );
         }      
 
         Actor actor2 = getOneIntersectingObject( mask.class );
         if( actor2 != null ){
-            score = 100;
+            MyWorld.score += 100;
             getWorld().removeObject( actor2 );
         }     
 
