@@ -22,10 +22,14 @@ public class MyWorld extends World
     static public int vaccine_counter = 0;  // カウンタ本体
     static public int mask_counter = 0;  // カウンタ本体   
 
+
+    static public int score = 0;
+
     public MyWorld()
     {   
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1250, 700, 1);
+
         //(850,550)                  
     } 
    
@@ -40,9 +44,21 @@ public class MyWorld extends World
             Greenfoot.setWorld( world2 );
         }
         
+        if( Greenfoot.isKeyDown( "a" ) ){
+        World game = new a();
+        Greenfoot.setWorld( game );
     }
+
+        //(850,550)
+        //showText( "score = " + score, 100, 50 );
+
+        
+        
+    }
+    
+
     
     
           
-    
 }
+
