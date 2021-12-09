@@ -13,11 +13,7 @@ public class human extends Actor
 
     private int score = 0;
     int s = 4;
-<<<<<<< HEAD
     int dir = 0;
-=======
-
->>>>>>> a165ce44f523687808127b7b29c7bc0f67d8c84c
     /**
      * Act - do whatever the human wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
