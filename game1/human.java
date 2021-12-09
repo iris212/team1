@@ -10,6 +10,7 @@ public class human extends Actor
 {
     private int score = 0;
     int s = 4;
+    int dir = 0;
     /**
      * Act - do whatever the human wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,27 +19,49 @@ public class human extends Actor
     {
         int x = getX();
         int y = getY();
+        
+        dir = 0;
+        //right=1,up=2,left=3,down=4
+        if( Greenfoot.isKeyDown( "right") ) dir = 1;
+        else if( Greenfoot.isKeyDown( "up"   ) ) dir = 2;
+        else if( Greenfoot.isKeyDown( "left" ) ) dir = 3;
+        else if( Greenfoot.isKeyDown( "down" ) ) dir = 4;
+        
+        if(dir == 1)setLocation( x+s,y );
+        else if(dir == 2)setLocation( x,y-s );
+        else if(dir == 3)setLocation( x-s,y );
+        else if(dir == 4)setLocation( x,y+s );
         Actor edge_up = getOneIntersectingObject( map_edge_up.class );
         Actor edge_down = getOneIntersectingObject( map_edge_down.class );
         Actor edge_left = getOneIntersectingObject( map_edge_left.class );
         Actor edge_right = getOneIntersectingObject( map_edge_right.class );
-
-        if( Greenfoot.isKeyDown( "left" ) ){
-            setLocation( x-s,y );
-            if(edge_right != null)setLocation( x+1,y );
+        setLocation( x,y );
+        
+        if(dir==1){
+            if(edge_left != null)dir = 0;
+            if(edge_up != null)dir = 2;
+            if(edge_down != null)dir = 4;
         }
-        if( Greenfoot.isKeyDown( "right" ) ){
-            setLocation( x+s,y );
-            if(edge_left != null)setLocation( x-1,y );
+        else if(dir==2){
+            if(edge_down != null)dir = 0;
+            if(edge_right != null)dir = 1;
+            if(edge_left != null)dir = 3;
         }
-        if( Greenfoot.isKeyDown( "up" ) ){
-            setLocation( x,y-s );
-            if(edge_down != null)setLocation( x,y+1 );
+        else if(dir==3){
+            if(edge_right != null)dir = 0;
+            if(edge_up != null)dir = 2;
+            if(edge_down != null)dir = 4;
         }
-        if( Greenfoot.isKeyDown( "down" ) ){
-            setLocation( x,y+s );
-            if(edge_up != null)setLocation( x,y-1 );
+        else if(dir==4){
+            if(edge_up != null)dir = 0;
+            if(edge_right != null)dir = 1;
+            if(edge_left != null)dir = 3;
         }
+ 
+        if(dir == 1)setLocation( x+s,y );
+        else if(dir == 2)setLocation( x,y-s );
+        else if(dir == 3)setLocation( x-s,y );
+        else if(dir == 4)setLocation( x,y+s );
 
         
         //アイテム判定諸々
