@@ -19,7 +19,6 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-<<<<<<< HEAD
     // Reffered from core/TextLabel.java
     // Copyright (C) 2013,2014 Poul Henriksen and Michael Kolling 
     // Licence: GPL2
@@ -99,17 +98,12 @@ public class MyWorld extends World
         
         //showText( "labels: "+WorldVisitor.getTextLabels(this).size(), 80, 20 );
     }
-    
-    
-    
+          
     private int timecount = 1500;
-        public MyWorld()
-    {
-=======
+
     public MyWorld()
     {   
 
->>>>>>> b819eaf8c3eea94bb0548c1a8f9755f36dcbb998
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1250, 700, 1);
         //(850,550)
