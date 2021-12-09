@@ -29,11 +29,10 @@ dependency11.type=UsesDependency
 dependency12.from=a
 dependency12.to=virus_1
 dependency12.type=UsesDependency
-<<<<<<< HEAD
-dependency13.from=MyWorld
-dependency13.to=heart
+dependency13.from=a
+dependency13.to=virus_2
 dependency13.type=UsesDependency
-dependency14.from=MyWorld
+dependency14.from=a
 dependency14.to=gameover
 dependency14.type=UsesDependency
 dependency15.from=virus_2
@@ -50,34 +49,11 @@ dependency18.to=map_edge_right
 dependency18.type=UsesDependency
 dependency19.from=human
 dependency19.to=map_edge_up
-=======
-dependency13.from=a
-dependency13.to=virus_2
-dependency13.type=UsesDependency
-dependency14.from=virus_2
-dependency14.to=map_edge_up
-dependency14.type=UsesDependency
-dependency15.from=virus_2
-dependency15.to=map_edge_down
-dependency15.type=UsesDependency
-dependency16.from=virus_2
-dependency16.to=map_edge_left
-dependency16.type=UsesDependency
-dependency17.from=virus_2
-dependency17.to=map_edge_right
-dependency17.type=UsesDependency
-dependency18.from=human
-dependency18.to=map_edge_up
-dependency18.type=UsesDependency
-dependency19.from=human
-dependency19.to=map_edge_down
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
 dependency19.type=UsesDependency
 dependency2.from=a
 dependency2.to=map_block1
 dependency2.type=UsesDependency
 dependency20.from=human
-<<<<<<< HEAD
 dependency20.to=map_edge_down
 dependency20.type=UsesDependency
 dependency21.from=human
@@ -86,17 +62,8 @@ dependency21.type=UsesDependency
 dependency22.from=human
 dependency22.to=map_edge_right
 dependency22.type=UsesDependency
-dependency3.from=MyWorld
-dependency3.to=map_edge_down
-=======
-dependency20.to=map_edge_left
-dependency20.type=UsesDependency
-dependency21.from=human
-dependency21.to=map_edge_right
-dependency21.type=UsesDependency
 dependency3.from=a
 dependency3.to=map_edge_up
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
 dependency3.type=UsesDependency
 dependency4.from=a
 dependency4.to=map_edge_down
@@ -116,23 +83,13 @@ dependency8.type=UsesDependency
 dependency9.from=a
 dependency9.to=skate
 dependency9.type=UsesDependency
-<<<<<<< HEAD
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
-height=885
-package.numDependencies=22
-package.numTargets=17
-=======
 editor.fx.0.height=896
-editor.fx.0.width=816
-editor.fx.0.x=961
-editor.fx.0.y=15
+editor.fx.0.width=1032
+editor.fx.0.x=695
+editor.fx.0.y=103
 height=973
-package.numDependencies=21
-package.numTargets=19
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
+package.numDependencies=22
+package.numTargets=18
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -155,98 +112,68 @@ target1.width=80
 target1.x=0
 target1.y=0
 target10.height=50
-target10.name=map_edge_up
+target10.name=vaccine
 target10.showInterface=false
 target10.type=ClassTarget
-target10.width=100
+target10.width=80
 target10.x=0
 target10.y=0
 target11.height=50
-target11.name=virus_2
+target11.name=map_edge_up
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=100
 target11.x=0
 target11.y=0
 target12.height=50
-<<<<<<< HEAD
-target12.name=skate
-=======
-target12.name=uchi
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
+target12.name=virus_2
 target12.showInterface=false
 target12.type=ClassTarget
-target12.width=80
+target12.width=100
 target12.x=0
 target12.y=0
 target13.height=50
-<<<<<<< HEAD
-target13.name=human
-=======
-target13.name=rem
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
+target13.name=skate
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=80
 target13.x=0
 target13.y=0
 target14.height=50
-<<<<<<< HEAD
-target14.name=MyWorld
-=======
-target14.name=skate
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
+target14.name=human
 target14.showInterface=false
 target14.type=ClassTarget
 target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
-<<<<<<< HEAD
-target15.name=gameover
-=======
-target15.name=human
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
+target15.name=MyWorld
 target15.showInterface=false
 target15.type=ClassTarget
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
-target16.name=MyWorld
+target16.name=gameover
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=80
 target16.x=0
 target16.y=0
 target17.height=50
-<<<<<<< HEAD
-target17.name=mask
-=======
-target17.name=gameover
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
+target17.name=map_edge_right
 target17.showInterface=false
 target17.type=ClassTarget
-target17.width=80
+target17.width=110
 target17.x=0
 target17.y=0
-<<<<<<< HEAD
-=======
 target18.height=50
-target18.name=map_edge_right
+target18.name=mask
 target18.showInterface=false
 target18.type=ClassTarget
-target18.width=110
+target18.width=80
 target18.x=0
 target18.y=0
-target19.height=50
-target19.name=mask
-target19.showInterface=false
-target19.type=ClassTarget
-target19.width=80
-target19.x=0
-target19.y=0
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
 target2.height=50
 target2.name=map_block1
 target2.showInterface=false
@@ -269,53 +196,42 @@ target4.width=80
 target4.x=0
 target4.y=0
 target5.height=50
-<<<<<<< HEAD
-target5.name=syujinko
-=======
 target5.name=map_edge_down
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=110
 target5.x=0
 target5.y=0
 target6.height=50
-target6.name=virus_1
+target6.name=syujinko
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=80
 target6.x=0
 target6.y=0
 target7.height=50
-target7.name=clear
+target7.name=virus_1
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
-target8.name=heart
+target8.name=clear
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=80
 target8.x=0
 target8.y=0
 target9.height=50
-target9.name=vaccine
+target9.name=heart
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
-<<<<<<< HEAD
-width=1536
-world.lastInstantiated=MyWorld
-xPosition=57
-yPosition=39
-=======
 width=1547
 world.lastInstantiated=MyWorld
-xPosition=62
+xPosition=120
 yPosition=46
->>>>>>> 3898ccbff7708c02451c86262eaa2c2abeec9b52
