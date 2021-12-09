@@ -22,7 +22,7 @@ public class MyWorld extends World
     }
     public void act()
     {
-       if( Greenfoot.isKeyDown( "a" ) ){
+       if( Greenfoot.isKeyDown( "enter" ) ){
         World game = new a();
         Greenfoot.setWorld( game );
     }
