@@ -23,10 +23,6 @@ public class human extends Actor
    
         int x = getX();
         int y = getY();
-
-        int s = 5;
-
-
         
         dir = 0;
         //right=1,up=2,left=3,down=4
@@ -39,25 +35,16 @@ public class human extends Actor
         else if(dir == 2)setLocation( x,y-s );
         else if(dir == 3)setLocation( x-s,y );
         else if(dir == 4)setLocation( x,y+s );
-
         Actor edge_up = getOneIntersectingObject( map_edge_up.class );
         Actor edge_down = getOneIntersectingObject( map_edge_down.class );
         Actor edge_left = getOneIntersectingObject( map_edge_left.class );
         Actor edge_right = getOneIntersectingObject( map_edge_right.class );
-
-
-
-        if( Greenfoot.isKeyDown( "left" ) ){
-            setLocation( x-s,y );
-            if(edge_right != null)setLocation( x+1,y );
-
         setLocation( x,y );
         
         if(dir==1){
             if(edge_left != null)dir = 0;
             if(edge_up != null)dir = 2;
             if(edge_down != null)dir = 4;
-
         }
         else if(dir==2){
             if(edge_down != null)dir = 0;
@@ -126,6 +113,4 @@ public class human extends Actor
         }  
 
     }    
- }
-
 }
