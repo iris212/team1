@@ -85,6 +85,9 @@ public class a extends MyWorld
                     addObject( new virus_2(), 25+(x*50), 25+(y*50));
                 }
             }
-        } 
+        }
+        for(int x = 1; x <= hearts; x++){
+            addObject( new heart(), 1225-(x*50), 25);
+        }
     }
 }

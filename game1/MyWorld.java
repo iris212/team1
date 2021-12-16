@@ -14,14 +14,14 @@ public class MyWorld extends World
      * 
      */
     static public int score = 0;
+    public static int hearts;
     public MyWorld()
     {   
-
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1250, 700, 1);
         //(850,550)
         //showText( "score = " + score, 100, 50 );
-
+        hearts = 4;
     }
     public void act()
     {
