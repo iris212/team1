@@ -15,5 +15,8 @@ public class heart extends Actor
     public void act() 
     {
         // Add your action code here.
+        if(MyWorld.hearts <= 3){
+            getWorld().removeObject( this );
+        }
     }    
 }
