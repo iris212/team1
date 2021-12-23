@@ -1,20 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class a here.
+ * Write a description of class stage1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class a extends MyWorld
+public class stage1 extends World
 {
 
     /**
-     * Constructor for objects of class a.
+     * Constructor for objects of class stage1.
      * 
      */
-    public a()
-    {
+    public static int hearts;
+    public stage1()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(1250, 700, 1);
+        
         int map[][] = {
                 {1,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                 {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1},
