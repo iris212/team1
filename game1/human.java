@@ -103,16 +103,27 @@ public class human extends Actor
             getWorld().removeObject( vaccine );
         }  
         Actor virus_1 = getOneIntersectingObject( virus_1.class );
+
+        if( virus_1 != null ){
+            //主人公は一時停止　ウイルスは動く
+        } 
+
+
         Actor virus_2 = getOneIntersectingObject( virus_2.class );
         if( (virus_1 != null || virus_2 != null) && damage == 0 ){
             //主人公は一時停止　ウイルスは動く
+
+        }  
+
+
             MyWorld.hearts -= 1;
             getImage().setTransparency(128);
             damage = 100;
-        } 
+
         if(damage > 0){
             damage-=1;
             if(damage ==0)getImage().setTransparency(255);
         }
+
     }    
 }
