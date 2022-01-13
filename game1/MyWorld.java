@@ -20,6 +20,8 @@ import java.awt.Graphics2D;
 
 public class MyWorld extends World
 {
+        public static int hearts;
+        
     // Reffered from core/TextLabel.java
     // Copyright (C) 2013,2014 Poul Henriksen and Michael Kolling 
     // Licence: GPL2
@@ -115,10 +117,9 @@ public class MyWorld extends World
     public void act()
     {
        if( Greenfoot.isKeyDown( "enter" ) ){
-        World game = new a();
+        World game = new stage1();
         Greenfoot.setWorld( game );
     }
 
     }
 }
-

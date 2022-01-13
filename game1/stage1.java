@@ -6,20 +6,29 @@ import java.util.ArrayList;
 import java.awt.Graphics2D;
 
 /**
- * Write a description of class a here.
+ * Write a description of class stage1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class a extends MyWorld
+public class stage1 extends World
 {
+
     private int timecount = 150;
+
+    public int width = 25;
+    public int height = 14;
+
     /**
-     * Constructor for objects of class a.
+     * Constructor for objects of class stage1.
      * 
      */
-    public a()
-    {
+
+    public stage1()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(1250, 700, 1);
+        
         int map[][] = {
                 {1,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                 {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1},
@@ -36,8 +45,8 @@ public class a extends MyWorld
                 {1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,8,8,0,0,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,7,7,7,7,7,1}
             };
-        for(int y = 0; y < 14; y++){
-            for(int x = 0; x < 25; x++){
+        for(int y = 0; y < height; y++){
+            for(int x = 0; x < width; x++){
                 //mapブロック置きます+(エッジ処理)
                 if(map[y][x]==1 || map[y][x]==7){
                     addObject( new map_block1(), 25+(x*50), 25+(y*50));
@@ -46,7 +55,7 @@ public class a extends MyWorld
                             addObject( new map_edge_up(),25+(x*50),(y*50));
                         }
                     }
-                    if(y != 13){
+                    if(y != height-1){
                         if(map[y+1][x]!=1 && map[y+1][x]!=7){
                             addObject( new map_edge_down(),25+(x*50),50+(y*50));
                         }
@@ -56,7 +65,7 @@ public class a extends MyWorld
                             addObject( new map_edge_left(),(x*50),25+(y*50));
                         }
                     }
-                    if(x != 24){
+                    if(x != width-1){
                         if(map[y][x+1]!=1 && map[y][x+1]!=7){
                             addObject( new map_edge_right(),50+(x*50),25+(y*50));
                         }
@@ -81,8 +90,8 @@ public class a extends MyWorld
             }
         }
         //ウイルス置くよ
-        for(int y = 0; y < 14; y++){
-            for(int x = 0; x < 25; x++){
+        for(int y = 0; y < height; y++){
+            for(int x = 0; x < width; x++){
                 if(map[y][x]==7){
                     addObject( new virus_1(), 25+(x*50), 25+(y*50));
                 }
@@ -106,8 +115,18 @@ public class a extends MyWorld
             //showText(getMyWorld)( "合計スコア " , 400,550, 50 , true , greenfoot.Color.BLACK );
             Greenfoot.stop();
         }
+
         
         
+
+        set_hearts();
+    }
+
+    public void set_hearts(){
+        for(int x = 1; x <= MyWorld.hearts; x++){
+            addObject( new heart(), 1225-(x*50), 25);
+        }
+
     }
     
     
