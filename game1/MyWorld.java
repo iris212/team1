@@ -26,10 +26,9 @@ public class MyWorld extends World
     public void act()
     {
        if( Greenfoot.isKeyDown( "enter" ) ){
-        World game = new a();
+        World game = new stage1();
         Greenfoot.setWorld( game );
     }
 
     }
 }
-
