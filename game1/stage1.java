@@ -1,4 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.core.TextLabel;
+import greenfoot.WorldVisitor;
+import greenfoot.util.GraphicsUtilities;
+import java.util.ArrayList;
+import java.awt.Graphics2D;
 
 /**
  * Write a description of class stage1 here.
@@ -8,18 +13,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class stage1 extends World
 {
+
+    private int timecount = 1500;
+
     public int width = 25;
     public int height = 14;
     /**
      * Constructor for objects of class stage1.
      * 
      */
-    public static int hearts;
+
     public stage1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1250, 700, 1);
         
+        MyWorld.hearts = 3;
         int map[][] = {
                 {1,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                 {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1},
@@ -90,13 +99,30 @@ public class stage1 extends World
                     addObject( new virus_2(), 25+(x*50), 25+(y*50));
                 }
             }
-        }
+        } 
         set_hearts();
+    }
+    
+    public void act()
+    {
+       timecount--;
+        showText( ""+timecount, 50, 50 );
+        if( timecount == 0 || MyWorld.hearts == 0)
+        {
+            addObject( new gameover(), 650 ,400 );
+            //((MyWorld)getWorld()).showText( "GAME OVER", 580, 250, 100, true, greenfoot.Color.RED );
+            showText( "残り体力" , 400,300 );
+            showText( "拾ったスコア加算アイテム数 " , 480,500 );
+            //showText(getMyWorld)( "合計スコア " , 400,550, 50 , true , greenfoot.Color.BLACK );
+            Greenfoot.stop();
+        }
+
+        
     }
 
     public void set_hearts(){
         for(int x = 1; x <= MyWorld.hearts; x++){
             addObject( new heart(), 1225-(x*50), 25);
         }
-    }
+    }   
 }

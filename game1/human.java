@@ -111,10 +111,11 @@ public class human extends Actor
             MyWorld.hearts -= 1;
             getImage().setTransparency(128);
             damage = 100;
-        } 
+        }  
         if(damage > 0){
             damage-=1;
             if(damage ==0)getImage().setTransparency(255);
         }
+
     }    
 }
