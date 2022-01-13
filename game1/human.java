@@ -9,11 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class human extends Actor
 {
 
-    
-
     private int score = 0;
     int s = 4;
     int dir = 0;
+    int damage = 0;
     /**
      * Act - do whatever the human wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -104,15 +103,16 @@ public class human extends Actor
             getWorld().removeObject( vaccine );
         }  
         Actor virus_1 = getOneIntersectingObject( virus_1.class );
-        if( virus_1 != null ){
-            //主人公は一時停止　ウイルスは動く
-            MyWorld.hearts -= 1;
-        } 
         Actor virus_2 = getOneIntersectingObject( virus_2.class );
-        if( virus_2 != null ){
+        if( (virus_1 != null || virus_2 != null) && damage == 0 ){
             //主人公は一時停止　ウイルスは動く
             MyWorld.hearts -= 1;
-        }  
-
+            getImage().setTransparency(128);
+            damage = 100;
+        } 
+        if(damage > 0){
+            damage-=1;
+            if(damage ==0)getImage().setTransparency(255);
+        }
     }    
 }

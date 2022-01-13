@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class stage1 extends World
 {
-
+    public int width = 25;
+    public int height = 14;
     /**
      * Constructor for objects of class stage1.
      * 
@@ -35,8 +36,8 @@ public class stage1 extends World
                 {1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,8,8,0,0,1},
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,7,7,7,7,7,1}
             };
-        for(int y = 0; y < 14; y++){
-            for(int x = 0; x < 25; x++){
+        for(int y = 0; y < height; y++){
+            for(int x = 0; x < width; x++){
                 //mapブロック置きます+(エッジ処理)
                 if(map[y][x]==1 || map[y][x]==7){
                     addObject( new map_block1(), 25+(x*50), 25+(y*50));
@@ -45,7 +46,7 @@ public class stage1 extends World
                             addObject( new map_edge_up(),25+(x*50),(y*50));
                         }
                     }
-                    if(y != 13){
+                    if(y != height-1){
                         if(map[y+1][x]!=1 && map[y+1][x]!=7){
                             addObject( new map_edge_down(),25+(x*50),50+(y*50));
                         }
@@ -55,7 +56,7 @@ public class stage1 extends World
                             addObject( new map_edge_left(),(x*50),25+(y*50));
                         }
                     }
-                    if(x != 24){
+                    if(x != width-1){
                         if(map[y][x+1]!=1 && map[y][x+1]!=7){
                             addObject( new map_edge_right(),50+(x*50),25+(y*50));
                         }
@@ -80,8 +81,8 @@ public class stage1 extends World
             }
         }
         //ウイルス置くよ
-        for(int y = 0; y < 14; y++){
-            for(int x = 0; x < 25; x++){
+        for(int y = 0; y < height; y++){
+            for(int x = 0; x < width; x++){
                 if(map[y][x]==7){
                     addObject( new virus_1(), 25+(x*50), 25+(y*50));
                 }
@@ -90,7 +91,11 @@ public class stage1 extends World
                 }
             }
         }
-        for(int x = 1; x <= hearts; x++){
+        set_hearts();
+    }
+
+    public void set_hearts(){
+        for(int x = 1; x <= MyWorld.hearts; x++){
             addObject( new heart(), 1225-(x*50), 25);
         }
     }

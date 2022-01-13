@@ -12,11 +12,13 @@ public class heart extends Actor
      * Act - do whatever the heart wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    int now_hearts = MyWorld.hearts;
+    static int myhearts = 0;
     public void act() 
     {
         // Add your action code here.
-        if(MyWorld.hearts <= 3){
-            getWorld().removeObject( this );
+        if(MyWorld.hearts != now_hearts){
+            //getWorld().removeObject( this );
         }
-    }    
+    }
 }
