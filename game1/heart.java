@@ -17,8 +17,10 @@ public class heart extends Actor
     public void act() 
     {
         // Add your action code here.
-        if(MyWorld.hearts != now_hearts){
-            //getWorld().removeObject( this );
+        int x = getX();
+        if(x < 1200-(MyWorld.hearts*50)){
+            getWorld().removeObject( this );
         }
+        
     }
 }

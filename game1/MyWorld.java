@@ -20,7 +20,7 @@ import java.awt.Graphics2D;
 
 public class MyWorld extends World
 {
-        public static int hearts;
+    public static int hearts;
         
     // Reffered from core/TextLabel.java
     // Copyright (C) 2013,2014 Poul Henriksen and Michael Kolling 
