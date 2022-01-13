@@ -103,7 +103,7 @@ public class a extends MyWorld
             //((MyWorld)getWorld()).showText( "GAME OVER", 580, 250, 100, true, greenfoot.Color.RED );
             showText( "残り体力" , 400,300 );
             showText( "拾ったスコア加算アイテム数 " , 480,500 );
-            //showText( "合計スコア " , 400,550, 50 , true , greenfoot.Color.BLACK );
+            //showText(getMyWorld)( "合計スコア " , 400,550, 50 , true , greenfoot.Color.BLACK );
             Greenfoot.stop();
         }
         
