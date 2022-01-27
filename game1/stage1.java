@@ -14,10 +14,26 @@ import java.awt.Graphics2D;
 public class stage1 extends World
 {
 
-    private int timecount = 1500;
+    private int timecount = 3000;
 
     public int width = 25;
     public int height = 14;
+    public static int map[][] = {
+            {1,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+            {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,8,1},
+            {1,5,1,1,0,1,1,1,1,0,1,1,0,1,1,0,1,0,1,1,1,1,1,0,1},
+            {1,0,1,1,0,1,1,1,1,0,1,1,0,1,1,0,1,0,1,1,1,1,0,0,1},
+            {1,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1},
+            {1,0,1,1,1,1,1,0,1,0,1,1,0,0,1,0,1,1,1,1,0,1,1,0,1},
+            {1,0,1,1,1,0,0,0,1,0,1,1,0,0,1,0,0,0,0,1,0,0,0,0,1},
+            {1,0,1,1,0,0,1,0,1,0,0,0,0,1,1,0,1,1,0,1,1,1,0,1,1},
+            {1,0,1,0,0,1,1,0,1,0,1,0,0,0,1,0,1,1,0,1,1,0,0,1,1},
+            {1,0,0,4,0,0,0,8,1,0,1,1,0,0,3,0,0,0,0,2,3,0,0,1,1},
+            {1,0,0,1,1,1,1,0,1,0,1,1,1,0,0,1,1,0,1,0,0,0,0,0,1},
+            {1,0,0,1,1,1,0,0,1,0,0,0,1,1,0,0,1,0,1,0,1,1,1,0,1},
+            {1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,8,0,0,1},
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,7,7,7,1}
+        };
     /**
      * Constructor for objects of class stage1.
      * 
@@ -27,24 +43,9 @@ public class stage1 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1250, 700, 1);
-        
+        MyWorld.score=0;
         MyWorld.hearts = 3;
-        int map[][] = {
-                {1,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-                {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1},
-                {1,5,1,1,0,1,1,1,1,0,1,1,0,1,1,0,1,0,1,1,1,1,1,0,1},
-                {1,0,1,1,0,1,1,1,1,0,1,1,0,1,1,0,1,0,1,1,1,1,0,0,1},
-                {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1},
-                {1,0,1,1,1,1,1,0,1,0,1,1,0,0,1,0,1,1,1,1,0,1,1,0,1},
-                {1,0,1,1,1,0,0,0,1,0,1,1,0,0,1,0,0,0,0,1,0,0,0,0,1},
-                {1,0,1,1,0,0,1,0,1,0,0,0,0,1,1,0,1,1,0,1,1,1,0,1,1},
-                {1,0,1,0,0,1,1,0,1,0,1,0,0,0,1,0,1,1,0,1,1,0,0,1,1},
-                {1,0,0,4,0,0,0,0,1,0,1,1,0,0,3,0,0,0,0,2,3,0,0,1,1},
-                {1,0,0,1,1,1,1,0,1,0,1,1,1,0,0,1,1,0,1,0,0,0,0,0,1},
-                {1,0,0,1,1,1,0,0,1,0,0,0,1,1,0,0,1,0,1,0,1,1,1,0,1},
-                {1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,8,8,0,0,1},
-                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,7,7,7,7,7,1}
-            };
+
         for(int y = 0; y < height; y++){
             for(int x = 0; x < width; x++){
                 //mapブロック置きます+(エッジ処理)
@@ -102,22 +103,55 @@ public class stage1 extends World
         } 
         set_hearts();
     }
-    
+
     public void act()
     {
-       timecount--;
-        showText( ""+timecount, 50, 50 );
+        timecount--;
+        if( timecount % 10 == 0)MyWorld.score+=1;
+        showText( "残り時間:"+timecount, 100, 50 );
+        showText( "score :"+MyWorld.score, 100, 80 );
         if( timecount == 0 || MyWorld.hearts == 0)
         {
-            addObject( new gameover(), 650 ,400 );
+            if(timecount != 0)addObject( new gameover(), 650 ,400 );
+            else addObject( new clear(), 650 ,400 );
+            MyWorld.score += MyWorld.hearts * 1000;
             //((MyWorld)getWorld()).showText( "GAME OVER", 580, 250, 100, true, greenfoot.Color.RED );
-            showText( "残り体力" , 400,300 );
-            showText( "拾ったスコア加算アイテム数 " , 480,500 );
+            showText( "残り体力  ："+MyWorld.hearts , 400,300 );
+            showText( "合計スコア ："+MyWorld.score , 480,500 );
             //showText(getMyWorld)( "合計スコア " , 400,550, 50 , true , greenfoot.Color.BLACK );
             Greenfoot.stop();
         }
 
-        
+        int mx =0;
+        int my =0;
+        if( timecount % 200 == 0){
+            mx =0;
+            my =0;
+            while(stage1.map[my][mx] == 1 ||stage1.map[my][mx] == 7){
+                mx = (int)(Math.random()*(width));
+                my = (int)(Math.random()*(height));
+            }
+            addObject( new mask(), 25+(mx*50), 25+(my*50));
+            addObject( new virus_1(), 25+(width*50), 25+(height*50));
+        }
+        if( timecount % 300 == 0){
+            mx =0;
+            my =0;
+            while(stage1.map[my][mx] == 1 ||stage1.map[my][mx] == 7){
+                mx = (int)(Math.random()*(width));
+                my = (int)(Math.random()*(height));
+            }
+            addObject( new alcohol(), 25+(mx*50), 25+(my*50));
+        }
+        if( timecount % 500 == 0){
+            mx =0;
+            my =0;
+            while(stage1.map[my][mx] == 1 ||stage1.map[my][mx] == 7){
+                mx = (int)(Math.random()*(width));
+                my = (int)(Math.random()*(height));
+            }
+            addObject( new vaccine(), 25+(mx*50), 25+(my*50));
+        }
     }
 
     public void set_hearts(){
