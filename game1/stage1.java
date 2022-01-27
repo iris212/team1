@@ -45,7 +45,6 @@ public class stage1 extends World
         super(1250, 700, 1);
         MyWorld.score=0;
         MyWorld.hearts = 3;
-
         for(int y = 0; y < height; y++){
             for(int x = 0; x < width; x++){
                 //mapブロック置きます+(エッジ処理)
@@ -124,7 +123,7 @@ public class stage1 extends World
 
         int mx =0;
         int my =0;
-        if( timecount % 200 == 0){
+        if( timecount % 200 == 0 && timecount != 0){
             mx =0;
             my =0;
             while(stage1.map[my][mx] == 1 ||stage1.map[my][mx] == 7){
@@ -134,7 +133,7 @@ public class stage1 extends World
             addObject( new mask(), 25+(mx*50), 25+(my*50));
             addObject( new virus_1(), 25+(width*50), 25+(height*50));
         }
-        if( timecount % 300 == 0){
+        if( timecount % 300 == 0 && timecount != 0){
             mx =0;
             my =0;
             while(stage1.map[my][mx] == 1 ||stage1.map[my][mx] == 7){
@@ -143,7 +142,7 @@ public class stage1 extends World
             }
             addObject( new alcohol(), 25+(mx*50), 25+(my*50));
         }
-        if( timecount % 500 == 0){
+        if( timecount % 500 == 0 && timecount != 0){
             mx =0;
             my =0;
             while(stage1.map[my][mx] == 1 ||stage1.map[my][mx] == 7){
